@@ -1,1 +1,1 @@
-# script
+Organize script as a backup
