@@ -1,4 +1,5 @@
 #
+import sys
 
 def API_filter(file_name):
     API_file_name = file_name.split(".")[0] + "_API" + ".log"
@@ -35,5 +36,9 @@ def API_filter(file_name):
         print("success")
 
 if __name__ == '__main__':
-    tag_file = "20210526160239.tag"
-    API_filter(tag_file)
+    if(len(sys.argv) != 2):
+        print("use python3 API_from_tag.py your_tag_filename")
+    else:
+        tag_file = sys.argv[1]
+        print("get API from file: " + tag_file)
+        API_filter(tag_file)
